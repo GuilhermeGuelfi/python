@@ -1,0 +1,20 @@
+print('{:=^40}'.format('LOJAS GUELFI'))
+val = float(input('DIGITE O VALOR DO PRODUTO: '))
+pag = int(input('''DIGITE DE ACORDO COM A CONDIÇÃO DE PAGAMENTO:
+[1] À VISTA
+[2] À VISTA NO CARTÃO
+[3] 2X NO CARTÃO
+[4] 3X OU MAIS NO CARTÃO
+ '''))
+
+if pag == 1:
+    val = val*0.90
+    print('O valor ficou em {}'.format(val))
+elif pag == 2:
+    val = val * 0.95
+    print('O valor ficou em {}'.format(val))
+elif pag == 3:
+    print ('O valor ficou em {}'.format (val))
+elif pag == 4:
+    val = val*1.20
+    print('O valor do produto ficou em {}'.format (val))
