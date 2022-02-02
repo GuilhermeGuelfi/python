@@ -1,0 +1,35 @@
+op=0
+n1 = int(input('Digite o valor 1: '))
+n2 = int(input('Digite o valor 2: '))
+
+while op != 6:
+    op = int(input('''O que você quer fazer?
+    [1] Somar
+    [2] Subtrair
+    [3] Multiplicar
+    [4] Dividir
+    [5] Novos valores
+    [6] Sair do programa'''))
+    if op == 1:
+        print('A soma entra {} e {} é'.format(n1,n2),n1+n2)
+    elif op == 2:
+        print('A subtração entre {} e {} é'.format(n1,n2),n1-n2)
+    elif op == 3:
+        print('A multiplicação entre {} e {} é'.format(n1,n2),n1*n2)
+    elif op == 4:
+        print('A divisão entre {} e {} é'.format(n1,n2),n1/n2)
+    elif op == 5:
+        n1 = int(input('Digite o valor 1: '))
+        n2 = int(input('Digite o valor 2: '))
+        op = int(input('''O que você quer fazer?
+        [1] Somar
+        [2] Subtrair
+        [3] Multiplicar
+        [4] Dividir
+        [5] Novos valores
+        [6] Sair do programa'''))
+        if op == 6:
+            print('Você saiu do programa')
+    elif op == 6:
+        print('Você saiu do programa')
+
