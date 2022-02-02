@@ -1,0 +1,12 @@
+idade = int(input('Digite sua idade: '))
+men = idade - 18
+mai = 18 - idade
+
+if idade > 18:
+    print('Já passou da hora de você se alistar!', end='')
+    print (' Você está atrasado {} anos'.format(men))
+elif 18 > idade:
+    print ('Ainda não está na hora de você se alistar!',end='')
+    print (' Ainda faltam {} anos'.format(mai))
+elif idade == 18:
+    print ('Está na hora de você se alistar, vá imediatamente!',end='')
