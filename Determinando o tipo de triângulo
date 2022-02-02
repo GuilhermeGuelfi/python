@@ -1,0 +1,14 @@
+r1 = int(input('Valor de r1: '))
+r2 = int(input('Valor de r2: '))
+r3 = int(input('Valor de r3: '))
+
+if (r1-r2<r3<r1+r2 and r1-r3<r2<r1+r3 and r2-r3<r1<r2+r3):
+    print('Pode formar um triângulo')
+    if (r1!=r2!=r3!=r1):
+        print('Seu triângulo é ESCALENO!')
+    elif r1==r2==r3:
+        print('Seu triângulo é EQUILÁTERO')
+    else:
+        print('ISÓSCELES')
+else:
+    print('Não pode formar um triangulo')
