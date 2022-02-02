@@ -1,0 +1,32 @@
+n = int(input('Digite o primeiro número da sua razão aritmética: '))
+r = int(input('Digite a razão da sua P.A: '))
+cont = 1
+a = n
+atm = -1
+while cont <=10:
+
+    cont = cont
+    a = n + (cont - 1)*r
+    print('{}-'.format(a), end='')
+    cont +=1
+print('FIM')
+mais = int(input('''Você quer mostrar mais termos?
+    [1] SIM
+    [2] NÃO'''))
+while mais == 1:
+    tm = int(input('Quantos termos você quer ver a mais? '))
+    atm = atm + tm
+    while cont <= 11+atm:
+        print('{}-'.format(a), end='')
+        cont = cont
+        a = n + (cont - 1) * r
+        cont += 1
+    print('FIM')
+    mais = int(input('''Você quer mostrar mais termos?
+        [1] SIM
+        [2] NÃO'''))
+
+
+if mais == 2:
+    print('O programa acabou')
+print('O número total de termos foi de ',cont-1)
