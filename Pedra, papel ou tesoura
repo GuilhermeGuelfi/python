@@ -1,0 +1,27 @@
+import random
+while True:
+    a = random.choice(['pedra', 'papel', 'tesoura'])
+    u = str(input('Digite o que você quer escolher (pedra, papel ou tesoura): ').lower())
+
+    if (u in 'pedrapapeltesoura'):
+        if (u == 'pedra' and a == 'tesoura'):
+            print ('Escolhi tesoura, você ganhou!')
+        elif (u == 'pedra' and a == 'pedra'):
+            print('Empate!')
+        elif (u == 'pedra' and a == 'papel'):
+            print('Escolhi tesoura, você perdeu!')
+        elif (u == 'papel' and a == 'pedra'):
+            print('Escolhi pedra, você ganhou!')
+        elif (u == 'papel' and a == 'papel'):
+            print('Empate!')
+        elif (u == 'papel'and a == 'tesoura'):
+            print('Escolhi tesoura, você perdeu')
+        elif (u == 'tesoura' and a == 'papel'):
+            print('Escolhi papel, você ganhou!')
+        elif (u == 'tesoura' and a == 'tesoura'):
+            print('Empate')
+        elif (u=='tesoura' and a == 'pedra'):
+            print('Escolhi pedra, você perdeu!')
+        break
+    elif (u!='pedra' and 'papel' and 'tesoura'):
+        print('Erro. Tente novamente')
