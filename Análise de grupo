@@ -1,0 +1,24 @@
+idadecont = 0
+totH = 0
+m20 = 0
+while True:
+    idade = int(input('Digite a idade: '))
+    sexo = ' '
+    cont = ' '
+    while sexo not in 'MF':
+        sexo = str(input('Digite o sexo: [M/F]')).upper().strip()
+
+
+    if idade > 18:
+        idadecont += 1
+    if sexo == 'M':
+        totH+=1
+    if sexo == 'F' and idade<20:
+        m20+=1
+    while cont not in 'SN':
+        cont = str(input('Você deseja cadastrar mais pessoas? [S/N]')).upper().strip()
+    if cont == 'N':
+        break
+print(f'{idadecont} pessoas tem mais de 18 anos')
+print(f'{totH} homens foram cadastrados')
+print(f'{m20} mulheres tem menos de 20 anos')
