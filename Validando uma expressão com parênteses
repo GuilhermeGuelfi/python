@@ -1,0 +1,15 @@
+exp = str(input('Digite uma expressão: '))
+par=[]
+for c,simb in enumerate(exp):
+    if '(' in simb:
+        par.append('(')
+    if ')' in simb:
+        if len(par)>0:
+            par.pop()
+        else:
+            par.append(')')
+            break
+if len(par) == 0:
+    print('Expressão válida!')
+else:
+    print('Expressão inválida!')
