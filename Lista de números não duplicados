@@ -1,0 +1,14 @@
+cont = 'S'
+listanum=[]
+while True:
+    if cont == 'S':
+        num = int(input('Digite um valor: '))
+        if num not in listanum:
+            listanum.append(num)
+            print('Valor adicionado!')
+        else:
+            print('Valor não adicionado pois é um número duplicado!')
+        cont = str(input('Você deseja continuar? [S/N]')).upper().strip()[0]
+        if cont == 'N':
+            break
+print(f'Você digitou os valores {listanum}')
