@@ -1,0 +1,42 @@
+p = {}
+listap = []
+cont = 'S'
+somaidade = 0
+media = 0
+while True:
+    if cont == 'S':
+        p['nome'] = str(input('Nome: '))
+        p['sexo'] = str(input('Sexo: ')).upper().strip()[0]
+        p['idade'] = int(input('Idade: '))
+        somaidade += p['idade']
+        listap.append(p.copy())
+    elif cont == 'N':
+        break
+    elif cont not in 'S' and 'N':
+        print('Comando inválido. Tente novamente')
+    cont = str(input('Deseja continuar? [S/N]')).strip().upper()[0]
+print('=-'*30)
+#Número de pessoas cadastradas:
+print(f'{len(listap)} pessoas foram cadastradas.')
+print('=-'*30)
+#Média de idade das pessoas cadastradas:
+media = somaidade/len(listap)
+print(f'A média de idade das pessoas cadastradas é de {media:.2f} anos.')
+print('=-'*30)
+#Mulheres cadastradas:
+print('As mulheres cadastradas foram', end=' ')
+for m in listap:
+    if m['sexo'] == 'F':
+        print(f'{m["nome"]}',end=' ')
+print()
+print('=-'*30)
+#Pessoas com idade acima da idade média:
+print(f'Pessoas com idade acima da média: ')
+print()
+for i in listap:
+    if i['idade'] > media:
+        for k, v in i.items():
+            print(f'{k} = {v} / ',end= '')
+        print()
+print()
+print('<<PROGRAMA ENCERRADO>>')
