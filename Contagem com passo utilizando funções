@@ -1,0 +1,36 @@
+from time import sleep
+def contcres (i,f,p):
+    c = 1
+    print(f'Contagem de {i} até {f} de {p} em {p}: ')
+    while c<=f:
+        sleep(0.4)
+        print(c, end = ' ')
+        c += 1
+    print()
+
+def contdec (i,f,p):
+    c = i
+    print(f'Contagem de {i} até {f} de {p} em {p}: ')
+    while c >= f:
+        sleep (0.4)
+        print(c,end = ' ')
+        c -= 2
+    print()
+
+
+def contpers(início, fim, passo):
+    c = início
+    while c <= fim:
+        sleep(0.4)
+        print(c, end = ' ')
+        c += passo
+
+#Programa principal
+contcres(1,10,1)
+contdec(10,0,2)
+print(f'Agora é sua vez de personalizar a contagem: ')
+início = int(input('Início: '))
+fim = int(input('Fim: '))
+passo = int(input('Passo: '))
+contpers(início, fim, passo)
+
