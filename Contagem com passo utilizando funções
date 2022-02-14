@@ -19,18 +19,37 @@ def contdec (i,f,p):
 
 
 def contpers(início, fim, passo):
-    c = início
-    while c <= fim:
-        sleep(0.4)
-        print(c, end = ' ')
-        c += passo
+    print(f'Agora é sua vez de personalizar a contagem: ')
+    início = int(input('Início: '))
+    fim = int(input('Fim: '))
+    passo = int(input('Passo: '))
+    if início < fim and passo != 0:
+        c = início
+        while c <= fim:
+            sleep(0.4)
+            print(c, end = ' ')
+            c += passo
+    elif início > fim and passo > 0:
+        c = início
+        while c >= fim:
+            sleep(0.4)
+            print(c, end = ' ')
+            c -= passo
+    elif passo < 0 and início > fim:
+        c = início
+        while c >= fim:
+            sleep (0.4)
+            print(c, end = ' ')
+            c += passo
+    if passo == 0:
+        print('Não é possivel utilizar PASSO = 0. Tente novamente.')
+
 
 #Programa principal
+início = 0
+fim = 0
+passo = 0
 contcres(1,10,1)
 contdec(10,0,2)
-print(f'Agora é sua vez de personalizar a contagem: ')
-início = int(input('Início: '))
-fim = int(input('Fim: '))
-passo = int(input('Passo: '))
 contpers(início, fim, passo)
 
