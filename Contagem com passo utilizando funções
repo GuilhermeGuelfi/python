@@ -52,4 +52,3 @@ passo = 0
 contcres(1,10,1)
 contdec(10,0,2)
 contpers(início, fim, passo)
-
